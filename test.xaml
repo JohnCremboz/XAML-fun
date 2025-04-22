@@ -1,12 +1,29 @@
-<StackPanel Margin="10">
-    <TextBlock Text="Naam:"/>
-    <TextBox x:Name="NameTextBox" Margin="0,0,0,10"/>
+<DockPanel>
+    <!-- Top Bar -->
+    <Border DockPanel.Dock="Top" Background="#FF2196F3" Height="50">
+        <TextBlock Text="Mijn Applicatie" Foreground="White" FontSize="24" VerticalAlignment="Center" Margin="20,0"/>
+    </Border>
 
-    <TextBlock Text="E-mail:"/>
-    <TextBox x:Name="EmailTextBox" Margin="0,0,0,10"/>
+    <!-- Left Sidebar -->
+    <Border DockPanel.Dock="Left" Background="#FFF5F5F5" Width="200">
+        <StackPanel Margin="10">
+            <Button Content="Menu Item 1" Margin="0,5"/>
+            <Button Content="Menu Item 2" Margin="0,5"/>
+            <Button Content="Menu Item 3" Margin="0,5"/>
+        </StackPanel>
+    </Border>
 
-    <TextBlock Text="Bericht:"/>
-    <TextBox x:Name="MessageTextBox" AcceptsReturn="True" Height="100" Margin="0,0,0,10"/>
+    <!-- Main Content -->
+    <StackPanel Margin="10">
+        <TextBlock Text="Naam:"/>
+        <TextBox x:Name="NameTextBox" Margin="0,0,0,10"/>
 
-    <Button Content="Verzenden"/>
-</StackPanel>
+        <TextBlock Text="E-mail:"/>
+        <TextBox x:Name="EmailTextBox" Margin="0,0,0,10"/>
+
+        <TextBlock Text="Bericht:"/>
+        <TextBox x:Name="MessageTextBox" AcceptsReturn="True" Height="100" Margin="0,0,0,10"/>
+
+        <Button Content="Verzenden"/>
+    </StackPanel>
+</DockPanel>
